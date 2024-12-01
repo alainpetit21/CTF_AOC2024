@@ -5,7 +5,7 @@ def main():
     chall = ChallengeDay1C1("./data/input.txt")
     chall.interpret_data()
 
-    print("Somehting")
+    print(chall.run())
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@ from engine.Challenge import Challenge
 import re
 
 
-class ChallengeDay1C1(Challenge):
+class ChallengeDay1C2(Challenge):
     def __init__(self, filename=None):
         super().__init__(filename)
         self.list1 = []

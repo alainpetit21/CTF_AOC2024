@@ -1,5 +1,6 @@
 from engine.Challenge import Challenge
 import re
+from collections import Counter
 
 
 class ChallengeDay1C2(Challenge):
@@ -7,7 +8,7 @@ class ChallengeDay1C2(Challenge):
         super().__init__(filename)
         self.list1 = []
         self.list2 = []
-        self.diffs = []
+        self.muls = []
         self.result = 0
 
     def interpret_data(self, data_inj: [str] = None):
@@ -20,15 +21,11 @@ class ChallengeDay1C2(Challenge):
             self.list2.append(int(group[1]))
 
     def run(self):
-        self.list1 = sorted(self.list1)
-        self.list2 = sorted(self.list2)
+        counter = Counter(self.list2)
 
-        for i in range(len(self.list1)):
-            val1 = self.list1[i]
-            val2 = self.list2[i]
+        for val in self.list1:
+            nb_occurrence = counter[val]
+            self.muls.append(val * nb_occurrence)
 
-            self.diffs.append(abs((val2-val1)))
-
-        self.result = sum(self.diffs)
-
+        self.result = sum(self.muls)
         return self.result

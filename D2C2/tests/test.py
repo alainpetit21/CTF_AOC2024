@@ -1,15 +1,15 @@
-from D2C2.src.ChallengeDay2C2 import ChallengeDay2C2
+from D2C2.src.ChallengeDay2C2 import ChallengeDay3C1
 
 
 def test_loading():
-    chall = ChallengeDay2C2("./data/example.txt")
+    chall = ChallengeDay3C1("./data/example.txt")
 
     assert chall.data[0][0] == '7'
     assert chall.data[1][0] == '1'
 
 
 def test_report_num():
-    chall = ChallengeDay2C2("./data/example.txt")
+    chall = ChallengeDay3C1("./data/example.txt")
     chall.interpret_data()
 
     assert chall.data_num[0][0] == 7
@@ -17,7 +17,7 @@ def test_report_num():
 
 
 def test_result():
-    chall = ChallengeDay2C2("./data/example.txt")
+    chall = ChallengeDay3C1("./data/example.txt")
     chall.interpret_data()
     chall.run()
 

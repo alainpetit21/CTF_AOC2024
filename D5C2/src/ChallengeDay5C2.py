@@ -1,5 +1,3 @@
-import re
-
 from engine.Challenge import Challenge
 
 

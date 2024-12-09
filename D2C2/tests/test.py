@@ -10,7 +10,7 @@ def test_loading():
 
 def test_report_num():
     chall = ChallengeDay3C1("./data/example.txt")
-    chall.interpret_data()
+    chall.test_interpret_data()
 
     assert chall.data_num[0][0] == 7
     assert chall.data_num[5][4] == 9
@@ -18,7 +18,7 @@ def test_report_num():
 
 def test_result():
     chall = ChallengeDay3C1("./data/example.txt")
-    chall.interpret_data()
+    chall.test_interpret_data()
     chall.run()
 
     assert chall.result == 4

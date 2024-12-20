@@ -1,3 +1,5 @@
+from abc import abstractmethod
+
 from engine.Exceptions.ExFileNotProvided import ExFileNotProvided
 from engine.Exceptions.ExNoData import ExNoData
 
@@ -31,5 +33,6 @@ class Challenge:
 
         return data
 
+    @abstractmethod
     def run(self):
-        pass
+        ...

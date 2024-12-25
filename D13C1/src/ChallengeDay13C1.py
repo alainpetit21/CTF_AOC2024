@@ -101,13 +101,6 @@ class ChallengeDay13C1(Challenge):
                         min_cost = cost
                         best_solution = sol
             return best_solution, min_cost
-        """
-        elif isinstance(solutions, tuple):  # Single solution as a tuple (a, b)
-            a_val, b_val = solutions
-            if a_val >= 0 and b_val >= 0:
-                cost = c_a * a_val + c_b * b_val
-                return {a: a_val, b: b_val}, cost
-        """
 
         return None, None
 

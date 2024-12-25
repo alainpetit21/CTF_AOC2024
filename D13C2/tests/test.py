@@ -4,13 +4,15 @@ from D13C2.src.ChallengeDay13C2 import ChallengeDay13C2
 def test_loading():
     chall = ChallengeDay13C2("./data/example.txt")
 
-    assert chall.data[0][0] == '8'
-    assert chall.data[1][0] == '7'
+    assert chall.data[0][0] == 'B'
+    assert chall.data[1][0] == 'B'
 
 
 def test_interpret_data():
     chall = ChallengeDay13C2("./data/example.txt")
     chall.interpret_data()
+
+    assert len(chall.machines) == 4
 
 
 def test_result():
@@ -18,7 +20,7 @@ def test_result():
     chall.interpret_data()
 
     chall.run()
-    assert chall.result == 2
+    assert chall.result == 875318608908
 
 
 if __name__ == '__main__':

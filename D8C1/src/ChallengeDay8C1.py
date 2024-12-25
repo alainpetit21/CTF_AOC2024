@@ -5,7 +5,6 @@ from D8C1.src.Antinode import Antinode
 from engine.Challenge import Challenge
 
 
-
 class ChallengeDay8C1(Challenge):
     WIDTH = 0
     HEIGHT = 0

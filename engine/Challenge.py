@@ -31,6 +31,9 @@ class Challenge:
         else:
             raise ExNoData()
 
+        for y in range(len(data)):
+            data[y] = data[y].strip()
+
         return data
 
     @abstractmethod
